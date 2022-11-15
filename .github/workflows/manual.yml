@@ -25,21 +25,26 @@ on:
         default: ''
         required: true
       adminEmail:
-        description: 'ChargeStationID'
+        description: 'adminEmail'
         default: ''
         required: true
       
       
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
+  franchisee_creation:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@main
+      with:
+        persist-credentials: false
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14.x'
+    - name: Setup latest NPM
+      run: npm install -g npm@latest
+    - name: Setup dependencies
+      run: npm install
+    - name: run node script
+      run: node franchisee_creation.js
