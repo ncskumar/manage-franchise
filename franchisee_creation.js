@@ -124,9 +124,11 @@ const findFranchiseName=(franchiseUrl)=>{
     return franchiseUrlData
 }
 
-const hosturl='testcms3.numocity.in';
-const cpName='TestCP'
-const franchiseName="/franchiseNameUrl/testing"
-const ChargeStationID=1;
-const adminEmail='ponraj.r@numocity.com'
+
+var arguments = process.argv
+const hosturl=arguments[2];
+const cpName=arguments[3];
+const franchiseName=arguments[4];
+const ChargeStationID=arguments[5];
+const adminEmail=arguments[6];
 franchiseCreation(hosturl, cpName, franchiseName, ChargeStationID, adminEmail)
