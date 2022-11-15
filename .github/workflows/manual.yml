@@ -34,6 +34,10 @@ jobs:
   franchisee_creation:
     runs-on: ubuntu-latest
     steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@main
+      with:
+        persist-credentials: false
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
