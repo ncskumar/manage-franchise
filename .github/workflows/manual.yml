@@ -57,4 +57,4 @@ jobs:
         userPort: ${{ secrets.USER_PORT}}
         notificationPort: ${{ secrets.NOTIFICATION_PORT}}
         assetPort: ${{ secrets.ASSET_PORT}}
-      run: node franchisee_creation.js ${{inputs.environment}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
+      run: node franchisee_creation.js ${{inputs.environment}} ${{inputs.cpID}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
