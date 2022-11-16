@@ -9,31 +9,32 @@ on:
     # Inputs the workflow accepts.
     inputs:
       environment:
-        description: 'environment'
+        description: environment
         default: ''
         required: true 
+        type: environment
         options:
         - TEST_CMS_3
         - TEST_CMS_2
         - DEV_FUSION
       hostUrl:
-        description: 'hostUrl'
+        description: hostUrl
         default: ''
         required: true
       cpID:  
-        description: 'cpName'
+        description: cpName
         default: ''
         required: true
       franchiseName:
-        description: 'franchiseName'
+        description: franchiseName
         default: ''
         required: true
       chargeStationID:
-        description: 'ChargeStationID'
+        description: ChargeStationID
         default: ''
         required: true
       adminEmail:
-        description: 'adminEmail'
+        description: adminEmail
         default: ''
         required: true
       
