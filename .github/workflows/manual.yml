@@ -9,27 +9,32 @@ on:
     # Inputs the workflow accepts.
     inputs:
       environment:
-        description: 'environment'
+        description: environment
         default: ''
-        required: true  
+        required: true 
+        type: choice
+        options:
+          - TEST_CMS_3
+          - TEST_CMS_2
+          - DEV_FUSION
       hostUrl:
-        description: 'hostUrl'
+        description: hostUrl
         default: ''
         required: true
-      cpName:  
-        description: 'cpName'
+      cpID:  
+        description: cpName
         default: ''
         required: true
       franchiseName:
-        description: 'franchiseName'
+        description: franchiseName
         default: ''
         required: true
-      ChargeStationID:
-        description: 'ChargeStationID'
+      chargeStationID:
+        description: ChargeStationID
         default: ''
         required: true
       adminEmail:
-        description: 'adminEmail'
+        description: adminEmail
         default: ''
         required: true
       
@@ -41,8 +46,6 @@ jobs:
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@main
-      with:
-        persist-credentials: false
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
