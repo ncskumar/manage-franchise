@@ -11,8 +11,7 @@ on:
       environment:
         description: 'environment'
         default: ''
-        required: true  
-        type: environment
+        required: true 
         options:
         - TEST_CMS_3
         - TEST_CMS_2
