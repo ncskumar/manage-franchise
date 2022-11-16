@@ -1,6 +1,6 @@
 const {connectAndExecQuery, getDataFromDb}=require('./dbconnect')
 const envHostUrlMapping={
-    TEST_CMS_3: testcms3.numocity.in
+    TEST_CMS_3: 'testcms3.numocity.in'
 }
 
 const franchiseCreation=async(environment, cpName, franchiseNameUrl, ChargeStationIDData, adminEmail)=>{
