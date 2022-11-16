@@ -17,12 +17,8 @@ on:
           - TEST_CMS_3
           - TEST_CMS_2
           - DEV_FUSION
-      hostUrl:
-        description: hostUrl
-        default: ''
-        required: true
       cpID:  
-        description: cpName
+        description: cpID
         default: ''
         required: true
       franchiseName:
@@ -61,4 +57,4 @@ jobs:
         userPort: ${{ secrets.USER_PORT}}
         notificationPort: ${{ secrets.NOTIFICATION_PORT}}
         assetPort: ${{ secrets.ASSET_PORT}}
-      run: node franchisee_creation.js ${{inputs.hostUrl}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
+      run: node franchisee_creation.js ${{inputs.environment}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
