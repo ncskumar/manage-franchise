@@ -130,9 +130,9 @@ const findFranchiseName=(franchiseUrl)=>{
 
 
 var arguments = process.argv
-const hosturl=arguments[2];
+const environment=arguments[2];
 const cpName=arguments[3];
 const franchiseName=arguments[4];
 const ChargeStationID=arguments[5];
 const adminEmail=arguments[6];
-franchiseCreation(hosturl, cpName, franchiseName, ChargeStationID, adminEmail)
+franchiseCreation(environment, cpName, franchiseName, ChargeStationID, adminEmail)
