@@ -26,9 +26,9 @@ const assetChanges=async (hosturl,cpName, franchiseData, ChargeStationID)=>{
     // sql connection obj
     const mysqlObj={
         host: hosturl,
-        port: process.env.assetdbPort || '3306',
+        port: process.env.assetPort,
         password: process.env.password,
-        user: process.env.user || 'root',
+        user: process.env.user,
         database: 'assetdb',
     };
     const franchiseName=franchiseData.franchiseName;
@@ -62,9 +62,9 @@ const assetChanges=async (hosturl,cpName, franchiseData, ChargeStationID)=>{
 const notificationChanges= async(hosturl,franchiseData)=>{
     const mysqlObj={
         host: hosturl,
-        port: process.env.NotificationPort || '3310',
+        port: process.env.notificationPort,
         password: process.env.password,
-        user: process.env.user || 'root',
+        user: process.env.user,
         database: 'notificationdb',
     };
     const notificationData={
@@ -91,9 +91,9 @@ const userChanges= async(hosturl, adminEmail, franchiseData)=>{
     const franchiseName=franchiseData.franchiseName;
     const mysqlObj={
         host: hosturl,
-        port: process.env.NotificationPort || '3307',
+        port: process.env.userPort,
         password: process.env.password,
-        user: process.env.user || 'root',
+        user: process.env.user,
         database: 'userdb',
     };
 
