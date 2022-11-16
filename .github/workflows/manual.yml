@@ -16,7 +16,7 @@ on:
         description: 'hostUrl'
         default: ''
         required: true
-      cpName:  
+      cpID:  
         description: 'cpName'
         default: ''
         required: true
@@ -24,7 +24,7 @@ on:
         description: 'franchiseName'
         default: ''
         required: true
-      ChargeStationID:
+      chargeStationID:
         description: 'ChargeStationID'
         default: ''
         required: true
