@@ -1,6 +1,10 @@
 const {connectAndExecQuery, getDataFromDb}=require('./dbconnect')
+const envHostUrlMapping={
+    TEST_CMS_3: testcms3.numocity.in
+}
 
-const franchiseCreation=async(hosturl, cpName, franchiseNameUrl, ChargeStationIDData, adminEmail)=>{
+const franchiseCreation=async(environment, cpName, franchiseNameUrl, ChargeStationIDData, adminEmail)=>{
+    const hosturl= envHostUrlMapping[environment];
     const franchiseData=findFranchiseName(franchiseNameUrl);
     const ChargeStationID=parseInt(ChargeStationIDData)
     const assetChangesResp=await assetChanges(hosturl,cpName, franchiseData, ChargeStationID)
