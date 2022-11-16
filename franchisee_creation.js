@@ -75,7 +75,7 @@ const notificationChanges= async(hosturl,franchiseData)=>{
         CompanyPAN: 'TO DO',
         CompanyTagLine: 'TO DO',
         CreatedOn: new Date(),
-        FranchaiseName: franchiseName,
+        FranchaiseName: franchiseData.franchiseName,
         IsDefault: 0,
     }
     // insert data in to email_info_table
