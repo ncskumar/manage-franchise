@@ -8,6 +8,10 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
+      environment:
+        description: 'environment'
+        default: ''
+        required: true  
       hostUrl:
         description: 'hostUrl'
         default: ''
@@ -32,6 +36,7 @@ on:
       
 jobs:
   franchisee_creation:
+    environment: ${{inputs.environment}}
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
