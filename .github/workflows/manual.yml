@@ -12,11 +12,11 @@ on:
         description: environment
         default: ''
         required: true 
-        type: environment
+        type: choice
         options:
-        - TEST_CMS_3
-        - TEST_CMS_2
-        - DEV_FUSION
+          - TEST_CMS_3
+          - TEST_CMS_2
+          - DEV_FUSION
       hostUrl:
         description: hostUrl
         default: ''
@@ -46,8 +46,6 @@ jobs:
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@main
-      with:
-        persist-credentials: false
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
