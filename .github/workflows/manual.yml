@@ -47,4 +47,4 @@ jobs:
     - name: Setup dependencies
       run: npm install
     - name: run node script
-      run: node franchisee_creation.js
+      run: node franchisee_creation.js ${{inputs.hostUrl}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
