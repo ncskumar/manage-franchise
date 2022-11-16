@@ -54,4 +54,8 @@ jobs:
     - name: run node script
       env:
         password: ${{ secrets.PASSWORD}}
+        user: ${{ secrets.USER}}
+        userPort: ${{ secrets.USER_PORT}}
+        notificationPort: ${{ secrets.NOTIFICATION_PORT}}
+        assetPort: ${{ secrets.ASSET_PORT}}
       run: node franchisee_creation.js ${{inputs.hostUrl}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
