@@ -53,5 +53,5 @@ jobs:
       run: npm install
     - name: run node script
       env:
-        password: ${{ secrets.${{inputs.environment}}_PASSWORD}}
+        password: ${{ secrets.PASSWORD}}
       run: node franchisee_creation.js ${{inputs.hostUrl}} ${{inputs.cpName}} ${{inputs.franchiseName}} ${{inputs.ChargeStationID}} ${{inputs.adminEmail}}
