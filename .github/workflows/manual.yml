@@ -12,6 +12,17 @@ on:
         description: 'environment'
         default: ''
         required: true  
+        type: environment
+      boolean:
+          type: boolean
+          description: True or False
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - foo
+        - bar
+        - baz
       hostUrl:
         description: 'hostUrl'
         default: ''
