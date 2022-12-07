@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Create Franchise
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -17,6 +17,7 @@ on:
           - TEST_CMS_3
           - TEST_CMS_2
           - DEV_FUSION
+          - AARGO
       cpID:  
         description: cpID
         default: ''
